@@ -1,0 +1,39 @@
+/* Style untuk container dan elemen lainnya */
+.container {
+  transition: background-color 2s;
+  padding: 20px;
+}
+
+.message, .heart {
+  display: inline-block;
+  margin: 10px;
+  font-size: 24px;
+}
+
+/* Animasi untuk membuka dan menutup pesan */
+.openNor {
+  opacity: 1;
+  transition: opacity 2s ease-in-out;
+}
+
+.closeNor {
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+}
+
+/* Pesan yang disembunyikan */
+.closed {
+  display: none;
+}
+
+/* Animasi untuk hati yang berdebar */
+@keyframes beating {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+/* Terapkan animasi jika elemen memiliki kelas beating */
+.heart.beating {
+  animation: beating 1s infinite;
+}
